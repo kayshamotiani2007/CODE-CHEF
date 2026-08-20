@@ -8,16 +8,8 @@ void solve() {
     int b = 2*Y + X ;
     int c = Y + 3*X ;
     
-    if(a<=b && a<=c) {
-        cout << a << "\n" ;
-    }
-    else if(b<=c && b<=a) {
-        cout << b << "\n" ;
-        
-    }
-    else if(c<=a && c<=b) {
-        cout << c << "\n" ;
-    }
+    int x = min({a,b,c}) ;
+    cout << x << "\n" ;
     
     
     
@@ -26,7 +18,7 @@ int main() {
     int T;
     cin >> T;
     while(T--) {
-        solve() ;
+        solve();
     }
     return 0;
 }
