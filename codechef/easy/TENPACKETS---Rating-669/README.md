@@ -64,7 +64,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-20T17:32:11.418Z  
+**Submitted:** 2026-08-20T17:35:36.156Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -77,16 +77,8 @@ void solve() {
     int b = 2*Y + X ;
     int c = Y + 3*X ;
     
-    if(a<=b && a<=c) {
-        cout << a << "\n" ;
-    }
-    else if(b<=c && b<=a) {
-        cout << b << "\n" ;
-        
-    }
-    else if(c<=a && c<=b) {
-        cout << c << "\n" ;
-    }
+    int x = min({a,b,c}) ;
+    cout << x << "\n" ;
     
     
     
@@ -95,7 +87,7 @@ int main() {
     int T;
     cin >> T;
     while(T--) {
-        solve() ;
+        solve();
     }
     return 0;
 }
