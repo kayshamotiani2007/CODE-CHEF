@@ -48,16 +48,17 @@ Output: [1,1]
 
 **Language:** C++  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 8.8 MB (beats 94.01%)  
-**Submitted:** 2026-09-24T18:04:12.754Z  
+**Memory:** 8.9 MB (beats 48.47%)  
+**Submitted:** 2026-09-28T17:22:52.752Z  
 
 ```cpp
 class Solution {
 public:
     vector<int> getRow(int rowIndex) {
-        vector row(rowIndex + 1, 1);
+        vector row(rowIndex + 1, 0);
+        row[0] = 1;
         
-        for (int i = 1; i < rowIndex; ++i) {
+        for (int i = 1; i <= rowIndex; ++i) {
             for (int j = i; j > 0; --j) {
                 row[j] += row[j - 1];
             }
